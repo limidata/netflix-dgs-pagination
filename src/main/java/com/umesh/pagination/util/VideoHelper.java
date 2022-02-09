@@ -10,15 +10,13 @@ import java.util.List;
  */
 public class VideoHelper {
 
-
-
-    public static List<Video> getVideoList(){
+    public static List<Video> getVideoList() {
         List<Video> videos = new ArrayList<>();
-        for(int i = 0; i<500; i++){
+        for (int i = 0; i < 500; i++) {
             Video video = new Video();
-            video.setId(i+1);
+            video.setId(i + 1);
             video.setDuration(500);
-            video.setTitle("Video title-" + (i+1));
+            video.setTitle("Video title-" + (i + 1));
             videos.add(video);
         }
         return videos;

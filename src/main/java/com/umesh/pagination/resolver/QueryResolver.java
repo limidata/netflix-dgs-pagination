@@ -15,12 +15,10 @@ import graphql.schema.DataFetchingEnvironment;
 @DgsComponent
 public class QueryResolver {
 
-
-
     @DgsData(parentType = "Query", field = "vidoes")
-    public Connection<Video> vidoes(DataFetchingEnvironment env, @InputArgument("first") int first, @InputArgument("after") String after) {
-
-
+    public Connection<Video> vidoes(DataFetchingEnvironment env,
+                                    @InputArgument("first") int first,
+                                    @InputArgument("after") String after) {
         return new SimpleListConnection<>(VideoHelper.getVideoList()).get(env);
     }
 }
